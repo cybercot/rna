@@ -1,16 +1,16 @@
-CBX2
-CBX4
-CBX6
-CBX7
-CBX8
-RING1
-RNF2
-PCGF1
-PCGF2
-PCGF3
-BMI1
+CBX2	down
+CBX4	down
+CBX6	down
+CBX7	no
+CBX8	no
+RING1	no
+RNF2	no
+PCGF1	down
+PCGF2	no
+PCGF3	down
+BMI1	down
 #####
-SUZ12
-EED
-EZH2
-JARID2
+SUZ12	down
+EED	down
+EZH2	down
+JARID2	down
