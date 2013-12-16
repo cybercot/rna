@@ -2,9 +2,9 @@
 use strict;
 
 
-open FILE1,"<Kaiso_NaCl_promoters.txt" or die "$!";
-open FILE2,"<Kaiso_NaCl_body.txt" or die "$!";
-open FILE3,"<Kaiso_NaCl_3utr.txt" or die "$!";
+open FILE1,"<H2AX_NaCl_promoters.txt" or die "$!";
+open FILE2,"<H2AX_NaCl_body.txt" or die "$!";
+open FILE3,"<H2AX_NaCl_3utr.txt" or die "$!";
 
 my %hash1;
 my %hash2;
@@ -23,12 +23,12 @@ while (<FILE3>) {
         my @mass=split;
         $hash3{$mass[11]}=$_
 }
-open RESULTS1,">k_nacl_promoters.txt" or die "$!";
-open RESULTS2,">k_nacl_promoters+body.txt" or die "$!";
-open RESULTS3,">k_nacl_promoters+body+3utr.txt" or die "$!";
-open RESULTS4,">k_nacl_body.txt" or die "$!";
-open RESULTS5,">k_nacl_body+3utr.txt" or die "$!";
-open RESULTS6,">k_nacl_3utr.txt" or die "$!";
+open RESULTS1,">h_nacl_promoters.txt" or die "$!";
+open RESULTS2,">h_nacl_promoters+body.txt" or die "$!";
+open RESULTS3,">h_nacl_promoters+body+3utr.txt" or die "$!";
+open RESULTS4,">h_nacl_body.txt" or die "$!";
+open RESULTS5,">h_nacl_body+3utr.txt" or die "$!";
+open RESULTS6,">h_nacl_3utr.txt" or die "$!";
 for my $key (sort keys %hash1) {
 	my @mass=split(' ',$hash1{$key});
 	if (not exists $hash2{$key} and not exists $hash3{$key}) {for (my $i=0; $i<scalar(@mass); ++$i) {print RESULTS1 "$mass[$i]	"}print RESULTS1 "\n"}
