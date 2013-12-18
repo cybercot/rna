@@ -1,9 +1,10 @@
 #!/usr/bin/perl -w
 use strict;
 
-open FILE,"<pca_new.txt" or die "$!";
+open FILE,"<pca.txt" or die "$!";
 while (<FILE>) {
 	my @mass=split;
-	for (my $i=3;$i<scalar(@mass);$i+=2) {print "$i\n"}
-	exit
+	print "$mass[0]	$mass[1]	$mass[2]	$mass[3]	";
+	for (my $i=4;$i<scalar(@mass);$i+=2) {my $ras=$mass[$i+1]-$mass[$i]; print "$ras	"}
+	print "\n"
 }

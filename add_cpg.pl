@@ -1,14 +1,14 @@
 #!/usr/bin/perl -w
 use strict;
 
-open FILE,"<cpg.txt" or die "$!";
+open FILE,"<temp2.txt" or die "$!";
 my %hash;
 while (<FILE>) {
 	my @mass=split;
 	$hash{$mass[3]}+=1
 }
 
-open FILE2,"<pca.txt" or die "$!";
+open FILE2,"<new_pca.txt" or die "$!";
 while (<FILE2>) {
 	my @mass=split;
 	my $test=0;
